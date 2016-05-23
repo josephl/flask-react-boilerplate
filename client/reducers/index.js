@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
-import kittens from './kittens';
+
+function index(state = {}, action) {
+  switch (action.type) {
+    default:
+      return state
+  }
+}
 
 const reducers = combineReducers({
-  kittens
+  index
 });
 
 export default reducers;

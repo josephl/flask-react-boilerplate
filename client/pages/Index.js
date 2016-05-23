@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import useSheet from 'react-jss';
-import Kittens from '../components/Kittens';
 import { connect } from 'react-redux';
-import { requestKittens } from '../actions/kittens';
 
 export default class Index extends Component {
-  componentDidMount() {
-    this.props.requestKittens();
-  }
-
   render() {
     const { sheet } = this.props;
 
     return (
       <div className={sheet.classes.index}>
-        <Kittens />
+        <h1>Welcome</h1>
       </div>
     );
   }
@@ -27,14 +21,13 @@ const STYLES = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#FFDDDD',
     color: '#660000'
   }
 };
 
 export default connect(
   () => ({}),
-  { requestKittens }
+  {}
 )(
   useSheet(Index, STYLES)
 );
