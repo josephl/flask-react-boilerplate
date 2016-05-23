@@ -24,7 +24,7 @@ config = update(config, {
 
   profile: { $set: true },
 
-  devtool: { $set: 'eval-source-map' },
+  devtool: { $set: '#eval-source-map' },
 
   output: {
     $set: {
